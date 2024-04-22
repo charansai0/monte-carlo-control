@@ -30,6 +30,7 @@ Reg no:212221240061
 ```
 
 ## MONTE CARLO CONTROL FUNCTION
+```
 from tqdm import tqdm
 def mc_control(env, gamma = 1.0, init_alpha = 0.5, min_alpha = 0.01,
                alpha_decay_ratio = 0.5, init_epsilon = 1.0, min_epsilon = 0.1,
@@ -66,7 +67,7 @@ def mc_control(env, gamma = 1.0, init_alpha = 0.5, min_alpha = 0.01,
   V = np.max(Q, axis = 1)
   pi = lambda s: {s:a for s, a in enumerate(np.argmax(Q, axis = 1))}[s]
   return Q, V, pi
-
+```
 
 ## OUTPUT:
 Mention the optimal policy, optimal value function , success rate for the optimal policy.
